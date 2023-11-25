@@ -74,7 +74,6 @@ export default function Chat() {
   }, []);
 
   async function getMessages() {
-
     try {
       const response = await axios.post(`${backendDomain}/bot`, {
         question: messageText
@@ -89,7 +88,6 @@ export default function Chat() {
           reactions: [],
         },
       ]);
-
     } catch (err) {
       console.error(err);
     }
@@ -288,9 +286,7 @@ export default function Chat() {
                 autoComplete="off"
                 className="input_box_text"
               />
-
               <button className="send">
-
                 <div className="send_buttom">Send</div>
 
               </button>
