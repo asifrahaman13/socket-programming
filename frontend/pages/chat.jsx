@@ -140,13 +140,13 @@ export default function Chat() {
     const updatedMessages = [...messages];
     const message = updatedMessages[index];
 
-    const existingReactionIndex = message.reactions.findIndex(
+    const existingReactionIndex = message?.reactions.findIndex(
       (reaction) =>
         reaction.user === clientId && reaction.type === reactionType
     );
 
     if (existingReactionIndex !== -1) {
-      message.reactions.splice(existingReactionIndex, 1);
+      message?.reactions.splice(existingReactionIndex, 1);
     } else {
       message.reactions.push({ user: clientId, type: reactionType });
     }
@@ -227,7 +227,7 @@ export default function Chat() {
                                     >
                                      
                                       <li>
-                                      <ReactTyped
+                                      {/* <ReactTyped
                     strings={[formatText(parsedMessage.data)]}
                     typeSpeed={10}
                   >
@@ -238,7 +238,8 @@ export default function Chat() {
                         __html: formatText(parsedMessage.data),
                       }}
                     ></p>
-                  </ReactTyped>
+                  </ReactTyped> */}
+                  {parsedMessage.data}
                                       </li>
                                     </ul>
                                   </>
