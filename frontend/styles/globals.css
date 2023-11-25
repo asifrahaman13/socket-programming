@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sender {
+  width: 85%;
+  margin: 0.2rem;
+  text-align: right;
+  border-radius: 1rem;
+  padding: 1rem;
+  /* background-color: rgb(236, 240, 246); */
+  margin-left: auto;
+  word-wrap: break-word; /* Add this property to handle long words */
+  white-space: pre-line; /* Add this property */
+}
+
+.others {
+  padding: 1rem;
+  width: 85%;
+  margin: 0.2rem;
+  border-radius: 1rem;
+  text-align: left;
+  /* background-color: rgb(241, 230, 144); */
+  overflow-wrap: break-word; /* Add this property to handle long words */
+  white-space: pre-line; /* Add this property */
+}
+
+.sender_user_card {
+  display: flex;
+  flex-direction: column-reverse; /* Reverse the order for the sender's user card */
+}
+
+.others_user_card {
+  display: flex;
+  flex-direction: column;
+}
+
+.others_user_card * {
+  margin: 0.2rem;
+}
+
+.sender_user_card * {
+  margin: 0.2rem;
+}
+/* Add additional styling as needed */
+
+.upload_form {
+  margin: 0.2rem;
+  width: 50vh;
+  border: 2px solid rgb(208, 221, 231);
+  text-align: right;
+  border-radius: 0.2rem;
+  margin-left: auto; /* Push sender's messages to the right */
+}
+
+.input_box_text {
+  width: 85%;
+  background-color: rgb(233, 241, 248);
+  height: 2.5rem;
+}
+
+.body {
+  overflow-x: hidden;
+}
+
+.chat_container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+}
+
+.content {
+  flex-grow: 1;
+  padding-bottom: 4rem; /* Adjust the value based on the height of your fixed card */
+}
+
+.input_form {
+  border: 2px solid rgb(217, 221, 232);
+  width: 100vw;
+  margin: 0.2rem;
+  text-align: right;
+  border-radius: 0.2rem;
+  margin-left: auto; /* Push sender's messages to the right */
+  display: flex;
+  flex-direction: row;
+}
+
+/* ScrollableCard.css */
+
+.scrollable-card-container {
+  border: none;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: fixed; /* Change to fixed for sticky at the bottom of the screen */
+  z-index: 2;
+  bottom: 5.8rem;
+  left: 0;
+  width: 100%;
+  /* Optional: Add a border at the top of the sticky footer */
+}
+
+.scrollable-card-content {
+  display: flex;
+}
+
+.scrollable-card-item {
+  margin: 0.2rem;
+  border-radius: 0.7rem;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 0rem;
+  min-width: 200px; /* Adjust the width as needed */
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .chat_container {
+    align-items: center;
+    width: 75vw;
+  }
+  .scrollable-card-container {
+    bottom: 6rem;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .scrollable-card-container {
+    bottom: 7rem;
+  }
+}
+
+.user_icons {
+  border-radius: 100rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #f1cac8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem; /* Adjust the margin as needed */
+}
+
+.others_messages {
+   width: 60vw;
+  background-color: rgb(250, 209, 95);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: justify;
+}
+.sender_messages {
+  background-color: rgb(240, 240, 249);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 60vw;
+  text-align: justify;
+}
+
+.content {
+  margin-bottom: 4rem;
+}
+
+.container {
+  flex: 1;
+  width: 80vw !important;
+  margin-bottom: 0rem;
+  /* Add other styles for the main content area if needed */
+}
+
+.form {
+  position: fixed;
+
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  /* background-color: #a62222; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.send {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(14, 14, 28);
+  border-radius: 0.2rem;
+  width: 15%;
+}
+
+.send_buttom {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
